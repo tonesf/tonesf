@@ -51,6 +51,7 @@ struct AddRecipeView: View {
         }
     }
 
+    @MainActor
     private func parse() async {
         isLoading = true
         errorMessage = nil

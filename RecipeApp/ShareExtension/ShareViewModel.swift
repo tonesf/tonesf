@@ -2,6 +2,7 @@ import Foundation
 import Observation
 import UniformTypeIdentifiers
 
+@MainActor
 @Observable
 final class ShareViewModel {
     var state: ShareState = .extracting
