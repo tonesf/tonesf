@@ -36,11 +36,7 @@ struct ShareView: View {
                                 if let servings = dto.metadata.servings {
                                     chip(icon: "person.2", text: "\(servings) \(dto.metadata.servingsUnit)")
                                 }
-                                if let total = dto.metadata.totalTimeMinutes ?? {
-                                    let p = dto.metadata.prepTimeMinutes ?? 0
-                                    let c = dto.metadata.cookTimeMinutes ?? 0
-                                    return (p + c) > 0 ? p + c : nil
-                                }() {
+                                if let total = totalMinutes(dto) {
                                     chip(icon: "clock", text: "\(total) min")
                                 }
                                 if let cuisine = dto.metadata.cuisine {
@@ -80,6 +76,12 @@ struct ShareView: View {
             }
         }
         .task { await vm.start() }
+    }
+
+    private func totalMinutes(_ dto: RecipeDTO) -> Int? {
+        if let total = dto.metadata.totalTimeMinutes { return total }
+        let sum = (dto.metadata.prepTimeMinutes ?? 0) + (dto.metadata.cookTimeMinutes ?? 0)
+        return sum > 0 ? sum : nil
     }
 
     private func statusView(icon: String, message: String) -> some View {

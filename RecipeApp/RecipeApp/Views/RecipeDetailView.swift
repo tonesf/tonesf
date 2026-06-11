@@ -89,7 +89,6 @@ struct RecipeDetailView: View {
                         Divider()
                         Link("View original source", destination: url)
                             .font(.footnote)
-                            .foregroundStyle(.accentColor)
                     }
                 }
                 .padding()
