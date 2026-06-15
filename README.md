@@ -1,8 +1,4 @@
-- 👋 Hi, I’m @tonesf
-- 👀 I’m interested in machine learning and AI
-- 🌱 I’m currently exploring applications of generative AI
-- 💞️ I’m looking to collaborate on OSS
-- 📫 Ping me on LinkedIn
+- 👋 Hi, I’m @tonesf, 🪄 vibe coding my way to a good time... 🥳
 
 <!---
 tonesf/tonesf is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
